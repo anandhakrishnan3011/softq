@@ -10,12 +10,14 @@ package softq;
  * @author Anandhu
  */
 public class Student extends javax.swing.JFrame {
+    int rset=0;
 
     /**
      * Creates new form Student
      */
     public Student() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -249,7 +251,7 @@ public class Student extends javax.swing.JFrame {
         String div=sdiv.getText();
         int rollno=Integer.parseInt(srollno.getText());
         int admnno=Integer.parseInt(sadmnno.getText());
-        Exam eobj = new Exam(name,dep,div,rollno,admnno);
+        Exam eobj = new Exam(name,dep,div,rollno,admnno,rset);
         eobj.setVisible(true);
         this.setVisible(false);
         

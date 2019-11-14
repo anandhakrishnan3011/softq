@@ -27,6 +27,7 @@ public class Login extends javax.swing.JFrame {
         Welcome objlog1 = new Welcome();
         objlog1.setVisible(false);
         objlog1.dispose();
+         this.setLocationRelativeTo(null);
     }
 
     /**

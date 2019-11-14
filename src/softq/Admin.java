@@ -24,6 +24,7 @@ String u;
      */
     public Admin() {
         initComponents();
+        this.setLocationRelativeTo(null);
         
     }
 
