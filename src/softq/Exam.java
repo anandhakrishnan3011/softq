@@ -25,6 +25,8 @@ String ediv;
 int erollno;
 int eadmnno;
 int erset;
+String schoice;
+int flag=0;
 
 
 int sc=0,sjava=0,shtml=0,scss=0,spython=0,sjavascript=0,ssql=0;
@@ -34,6 +36,7 @@ String cc="C";
 String subject;
 String url ="jdbc:mysql://localhost/softq?autoReconnect=true&serverTimezone=UTC&useSSL=False&allowPublicKeyRetrieval=true";
 ResultSet rs;
+String scourse;
 
 
 
@@ -54,6 +57,7 @@ ResultSet rs;
        
      
         initComponents();
+        this.setLocationRelativeTo(null);
         getval();
     }
 
@@ -77,7 +81,14 @@ ResultSet rs;
                    option2.setText(rs.getString(4));
                    option3.setText(rs.getString(5));
                    option4.setText(rs.getString(6));
+                   answer=rs.getString(7);
+                   scourse=rs.getString(8);
                    course.setText("Subject: " + rs.getString(8) );
+                   option1.setActionCommand(rs.getString(3));
+                   option2.setActionCommand(rs.getString(4));
+                   option3.setActionCommand(rs.getString(5));
+                   option4.setActionCommand(rs.getString(6));
+                   
                    erset=erset-1;
                }
         } catch (SQLException e) {
@@ -233,15 +244,26 @@ ResultSet rs;
                 
                 rs = pst.executeQuery();
                 erset=erset+1;
+                
+                
                if(rs.absolute(erset)){
-                   answer=rs.getString(7);
-                   System.out.println(answer);
-                   Sresult sobj=new Sresult(ename,edep,ediv,erollno,eadmnno,erset);
+                   if(rs.next()){flag=0;}
+                   else{flag=1;}
+         
+                   schoice=buttonGroup1.getSelection().getActionCommand();
+//                    
+                   Sresult sobj=new Sresult(ename,edep,ediv,erollno,eadmnno,erset,answer,schoice,flag,scourse);
                    sobj.setVisible(true);
                    this.setVisible(false);
                }
+              
+                
+                
+                
         } catch (SQLException e) {
-        JOptionPane.showMessageDialog(null,e);
+            jButton1.setText("FINISH");
+            String ex="Exam Finished click Finish";
+        JOptionPane.showMessageDialog(null,ex);
     }
         
         

@@ -5,6 +5,11 @@
  */
 package softq;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Anandhu
@@ -251,6 +256,37 @@ public class Student extends javax.swing.JFrame {
         String div=sdiv.getText();
         int rollno=Integer.parseInt(srollno.getText());
         int admnno=Integer.parseInt(sadmnno.getText());
+        String url ="jdbc:mysql://localhost/softq?autoReconnect=true&serverTimezone=UTC&useSSL=False&allowPublicKeyRetrieval=true";
+             try(Connection con = DriverManager.getConnection(url, "root", "")){
+    
+         String sql="INSERT INTO `result`(`admnno`, `rollno`, `name`, `department`, `division`, `c`, `java`, `html`, `css`, `python`, `Javascript`, `msql`)  VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";        
+        PreparedStatement pst=con.prepareStatement(sql);
+               
+//              
+                pst.setInt(1,admnno);
+                 pst.setInt(2, rollno);
+                 pst.setString(3, name);
+                  pst.setString(4, dep);
+                  pst.setString(5, div);
+                   pst.setInt(6, 0);
+                   pst.setInt(7, 0);
+                   pst.setInt(8, 0);
+                   pst.setInt(9, 0);
+                   pst.setInt(10, 0);
+                   pst.setInt(11, 0);
+                   pst.setInt(12, 0);
+                    
+                     pst.executeUpdate();
+                    
+                             
+                     
+                         
+                     
+                          
+             }
+             catch(Exception e){
+                 JOptionPane.showMessageDialog(null,e);
+             }
         Exam eobj = new Exam(name,dep,div,rollno,admnno,rset);
         eobj.setVisible(true);
         this.setVisible(false);
