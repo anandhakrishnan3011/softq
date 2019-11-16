@@ -287,7 +287,7 @@ String url ="jdbc:mysql://localhost/softq?autoReconnect=true&serverTimezone=UTC&
                 .addGap(22, 22, 22))
         );
 
-        jPanel2.setBackground(new java.awt.Color(0, 204, 255));
+        jPanel2.setBackground(new java.awt.Color(0, 153, 255));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
