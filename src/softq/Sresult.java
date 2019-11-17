@@ -138,7 +138,7 @@ String url ="jdbc:mysql://localhost/softq?autoReconnect=true&serverTimezone=UTC&
             
         }
         else{
-            res1msg.setText("The the Right answer "+sanswer);
+            resmsg.setText("The the Right answer was "+sanswer);
         }
        
         }
@@ -220,6 +220,9 @@ String url ="jdbc:mysql://localhost/softq?autoReconnect=true&serverTimezone=UTC&
             }
             
              }
+             else{
+            resmsg.setText(" The the Right answer was "+sanswer);
+        }
             
             
 
@@ -243,12 +246,12 @@ String url ="jdbc:mysql://localhost/softq?autoReconnect=true&serverTimezone=UTC&
         jPanel1 = new javax.swing.JPanel();
         resmsg = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        res1msg = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        resmsg.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        resmsg.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        resmsg.setForeground(new java.awt.Color(0, 153, 255));
 
         jButton1.setBackground(new java.awt.Color(0, 153, 255));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
@@ -258,8 +261,6 @@ String url ="jdbc:mysql://localhost/softq?autoReconnect=true&serverTimezone=UTC&
                 jButton1ActionPerformed(evt);
             }
         });
-
-        res1msg.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -271,20 +272,16 @@ String url ="jdbc:mysql://localhost/softq?autoReconnect=true&serverTimezone=UTC&
                         .addGap(381, 381, 381)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(79, 79, 79)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(resmsg, javax.swing.GroupLayout.DEFAULT_SIZE, 660, Short.MAX_VALUE)
-                            .addComponent(res1msg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addGap(0, 146, Short.MAX_VALUE))
+                        .addGap(66, 66, 66)
+                        .addComponent(resmsg, javax.swing.GroupLayout.PREFERRED_SIZE, 660, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(159, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(137, 137, 137)
+                .addGap(60, 60, 60)
                 .addComponent(resmsg, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(68, 68, 68)
-                .addComponent(res1msg, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 213, Short.MAX_VALUE)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(22, 22, 22))
         );
@@ -334,6 +331,7 @@ String url ="jdbc:mysql://localhost/softq?autoReconnect=true&serverTimezone=UTC&
             Pexam wel=new Pexam();
             wel.setVisible(true);
             this.setVisible(false);
+            this.dispose();
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -377,7 +375,6 @@ String url ="jdbc:mysql://localhost/softq?autoReconnect=true&serverTimezone=UTC&
     private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JLabel res1msg;
     private javax.swing.JLabel resmsg;
     // End of variables declaration//GEN-END:variables
 }

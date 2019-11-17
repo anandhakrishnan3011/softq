@@ -16,6 +16,7 @@ public class Pexam extends javax.swing.JFrame {
      */
     public Pexam() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
