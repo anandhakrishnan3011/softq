@@ -69,9 +69,11 @@ String scourse;
      */
     public void getval(){
         try (Connection con = DriverManager.getConnection(url, "root", "")) {
-            String sql="SELECT * FROM `question` WHERE qid>? order by qid";
+//            String sql="SELECT * FROM `question` WHERE qid>? order by qid";
+           String sql="SELECT * FROM `question` order by qid";
+               
              PreparedStatement pst=con.prepareStatement(sql);
-               pst.setInt(1,0);
+//               pst.setInt(1,0);
                 
                 rs = pst.executeQuery();
                 erset=erset+1;

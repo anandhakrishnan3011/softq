@@ -27,6 +27,7 @@ public class Filein extends javax.swing.JFrame {
      */
     public Filein() {
         initComponents();
+         this.setLocationRelativeTo(null);
     }
 
     /**
