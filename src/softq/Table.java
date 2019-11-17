@@ -35,9 +35,9 @@ public class Table extends javax.swing.JFrame {
      */
     public void table(){
         try(Connection con = DriverManager.getConnection(url, "root", "")){
-             String sql="SELECT * FROM question WHERE qid>? order by qid";     
+             String sql="SELECT * FROM question order by qid";     
                PreparedStatement pst=con.prepareStatement(sql);
-               pst.setInt(1, 0);
+               
                
                
                
