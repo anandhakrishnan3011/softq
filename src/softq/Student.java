@@ -97,6 +97,8 @@ public class Student extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setBackground(new java.awt.Color(0, 204, 255));
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("GO BACK");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -104,6 +106,8 @@ public class Student extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setBackground(new java.awt.Color(0, 204, 204));
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("START ");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

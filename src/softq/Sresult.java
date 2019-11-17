@@ -250,6 +250,8 @@ String url ="jdbc:mysql://localhost/softq?autoReconnect=true&serverTimezone=UTC&
 
         resmsg.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
 
+        jButton1.setBackground(new java.awt.Color(0, 153, 255));
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("NEXT");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

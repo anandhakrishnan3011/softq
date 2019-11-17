@@ -51,7 +51,9 @@ public class Pexam extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         jLabel1.setText("Thanks for attending the Examination!!!");
 
+        HOME.setBackground(new java.awt.Color(0, 153, 255));
         HOME.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        HOME.setForeground(new java.awt.Color(255, 255, 255));
         HOME.setText("Main Menu");
         HOME.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -59,7 +61,9 @@ public class Pexam extends javax.swing.JFrame {
             }
         });
 
+        EXIT.setBackground(new java.awt.Color(0, 153, 255));
         EXIT.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        EXIT.setForeground(new java.awt.Color(255, 255, 255));
         EXIT.setText("Exit");
         EXIT.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
