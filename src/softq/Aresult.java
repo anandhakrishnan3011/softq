@@ -128,7 +128,7 @@ public class Aresult extends javax.swing.JFrame {
         try(Connection con=DriverManager.getConnection(url,"root","")){
             String sql="SELECT * FROM result";
             PreparedStatement pst=con.prepareStatement(sql);
-//            pst.setInt(1, 0);
+
              ResultSet rs = pst.executeQuery();
                table.setModel(DbUtils.resultSetToTableModel(rs));
         }
