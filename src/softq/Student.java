@@ -279,6 +279,9 @@ public class Student extends javax.swing.JFrame {
                    pst.setInt(12, 0);
                     
                      pst.executeUpdate();
+                     Exam eobj = new Exam(name,dep,div,rollno,admnno,rset);
+        eobj.setVisible(true);
+        this.setVisible(false);
                     
                              
                      
@@ -287,11 +290,14 @@ public class Student extends javax.swing.JFrame {
                           
              }
              catch(Exception e){
-                 JOptionPane.showMessageDialog(null,e);
-             }
-        Exam eobj = new Exam(name,dep,div,rollno,admnno,rset);
-        eobj.setVisible(true);
+                 String ex="Already attended!!";
+                 JOptionPane.showMessageDialog(null,ex);
+                   Welcome objstudent1 = new Welcome();
         this.setVisible(false);
+        objstudent1.setVisible(true);
+                 
+             }
+        
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
